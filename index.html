@@ -1,0 +1,35 @@
+<html ng-app="myApp">
+<head>
+	<title></title>
+	<script src="dependencies/angular/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="dependencies/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+	<script src="app.js"></script>
+	<script src="controller.js"></script>
+	<script src="factory.js"></script>
+</head>
+<body ng-controller="lit-ctrl">
+	<div class="container">
+		<h1 class="text-center title">Japanese Literature Portal</h1>
+		<div class="center-box">
+			<input ng-model="input" class="form-control text-center" placeholder="filter by keyword"/>
+		</div>
+		<table border="1">
+			<col style="width: 60%">
+	        <col style="width: 25%">
+    	    <col style="width: 25%">
+    	    <col style="width: 25%">
+			<thead><tr>
+			<th>Collection</th>
+			<th>Story</th>
+			<th>Author</th>
+			<th>Other Info</th>
+			</tr></thead>
+			<tr ng-repeat="entry in bookData | filter:input">
+				<td>{{ entry.collection }}</td><td>{{ entry.story }}</td><td>{{ entry.author }}</td><td>{{ entry.extra || '' }}</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

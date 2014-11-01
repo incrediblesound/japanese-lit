@@ -1,0 +1,11 @@
+h1 {
+	font-family: 'Vollkorn', serif;
+	font-size: 34pt;
+}
+
+.center-box {
+	position: relative;
+	left: auto;
+	right: auto;
+	margin-bottom: 6px;
+}

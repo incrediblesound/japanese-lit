@@ -1,0 +1,16 @@
+{
+  "name": "jpn-lit",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "James H Edwards",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "express": "~4.10.1",
+    "excel": "~0.1.1"
+  }
+}
