@@ -9,4 +9,4 @@ angular.module('myApp')
     function get(){
       return $http.get('api/book-data');
     }
-  })
+  });

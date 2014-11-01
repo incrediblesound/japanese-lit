@@ -23,10 +23,10 @@ function createDataObject(data){
     results.push({collection: row[0], story: row[1], author: row[2], extra: row[3]});
   })
   return results;
-}
+};
 
 function forEach(arr, fn){
   for(var i = 0; i < arr.length; i++){
     fn(arr[i], i);
   }
-}
+};
