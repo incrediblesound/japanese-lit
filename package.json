@@ -9,6 +9,7 @@
   },
   "author": "James H Edwards",
   "license": "BSD-2-Clause",
+  "engine": "node 0.10.26",
   "dependencies": {
     "express": "~4.10.1",
   }
