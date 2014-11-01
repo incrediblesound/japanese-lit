@@ -1,15 +1,16 @@
 var express = require('express');
-var parseXlsx = require('excel');
 var port = process.env.PORT || 3000;
 var app = express();
+var fs = require('fs');
 
 app.use(express.static('.'));
 
 app.get('/api/book-data', function(req, res){
-	parseXlsx('AsadokuBookLists20140818.xlsx', function(err, data){
+	fs.readFile('AsadokuBookLists20140818.json', function(err, data){
     if(err) { console.log(err) }
-    data = createDataObject(data);
-    res.end(JSON.stringify(data));
+    // data = createDataObject(data);
+    data = data.toString();
+    res.end(data);
   })
 })
 
